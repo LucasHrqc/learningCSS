@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* SELETOR UNIVERSAL
+         * {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE CLASSES
+         .tag {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE ID
+         #aprovados {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DO DIV DIRETO DENTRO DO ID ANINHADO
+         #aninhado > div {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR O FILHO DIV DIRETO DENTRO DO ID ANINHADO
+         #aninhado > div {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE QUALQUER SECTION DENTRO DO ID ANINHADO
+         #aninhado section {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+        
+        /* SELETOR DO UL DIRETO APÓS P
+         p + ul {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE QUALQUER OL APÓS P
+         p ~ ul {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+        
+        /* SELETOR DE TODOS OS ELEMENTOS COM PROPRIEDADE FEIRA
+         [feira] {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE TODOS OS ELEMENTOS COM PROPRIEDADE FEIRA E NOME ESCRITORIO
+         [feira=escritorio] {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE TODOS OS ELEMENTOS COM PROPRIEDADE FEIRA E NOME COMPOSTO
+         [feira~=escritorio] {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DE TODOS OS ELEMENTOS COM PROPRIEDADE FEIRA QUE CONTÉM "SA" NO VALOR
+         [feira*=sa] {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DOS ÍMPARES QUE ESTÃO EM SECTION, P E UL(even = pares)
+         section > :nth-child(odd), p, ul {
+           color: #ff0;
+           background-color: #f77; 
+        } */
+
+        /* SELETOR DO SEGUNDO ELEMENTO SPAN DENTRO DA SECTION
+         section > span:nth-of-type(2) {
+           color: #ff0;
+           background-color: #f77; 
+        } */ 
+
+    </style>
+</head>
+
+<body class="tag">
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

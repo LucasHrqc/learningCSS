@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+           
+        div{
+            font-size: 60px;
+            color: #fff;
+            padding: 30px;
+            border: solid 2px #222;
+        }
+        
+        .static {
+            top: 100px;
+            left: 100px;
+            background-color: steelblue;
+        }
+
+        .fixed {
+            /* Fica fixo ao rolar a página */
+            position:fixed;
+            bottom: 20px;
+            right: 0px;
+            background-color: tomato;
+        }
+
+        .relative1{
+            /* Relativo ao elemento anterior */
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: seagreen;
+        }
+
+        .absolute1{
+            /* Se posiciona de acordo com o viewport e ignora totalmente os demais elementos */
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: violet;
+        }
+
+        .relative2{
+            font-size: 20px;
+            text-align: right;
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+        }
+
+        .absolute2 {
+            /* Se comporta de maneira ABSOLUTA em relação ao componente pai 
+            isso porque o elemento pai é position: relative */
+            /* Dependendo da relação entre as positions do tag pai e da tag filho
+            os comportamentos podem variar, comentar a position do .relative2 para testar */
+            font-size: 15px;
+            text-align: left;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+        }
+
+        .sticky {
+            /* Segue fixo e quando vai sair da tela, segue com a barra de rolagem */
+            position: -webkit-sticky; /* safari */
+            position: sticky; 
+            background-color: #777;
+            top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="static">Static (Padrão)</div>
+    <div class="fixed">Fixed</div>
+    <div class="relative1">Relative 1</div>
+    <div class="absolute1">Absolute 1</div>
+
+    <div class="relative2">
+        Relative 2 <div class="absolute2"> Absolute 2</div>
+    </div>
+
+    <div class="sticky">Sticky</div>
+    <p style="padding-bottom: 2000px;">Opa</p>
+</body>
+
+</html>

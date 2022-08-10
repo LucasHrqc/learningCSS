@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unidades #01</title>
+    <style>
+        /* DIMENSÕES ABSOLUTAS
+            px
+            cm
+            mm
+           VIEWPORT
+            vh - 1vh = 1/100, 100vh = 100/100 da altura do viewport. Ex: viewport 500px, 1vh = 5px
+            vw - 1vw = 1/100, 100vw = 100/100 da largura do viewport
+            vmin - menor dimensão do viewport
+            vmax - maior dimensão do viewport
+           FONT
+            rem - tamanho relativo da raiz principal da aplicação. Body tem fonte de 20px, 2rem = 40px
+            em - relativo ao pai do elemento. Ex div pai tem fonte de 50 pix, 2em = 100px
+           %
+            Caso especial, pois depende qual a referência da %.
+        */
+
+        /* TOP e LEFT só funcionam por conta da position ser absoluta */
+        .unidades-absolutas {
+            position: absolute;
+            font-size: 40px;
+            padding: 20px;
+            border: solid 2px #222;
+            margin: 30px;
+            width: 4cm; /* pouco usado */
+            height: 20mm; /* pouco usado */
+            top: 150px;
+            left: 200px;
+        }
+        /* As dimensões variam de acordo com o tamanho do viewport, ou seja, navegador */
+        .unidades-relativas {
+            position: absolute;
+            font-size: 4em;
+            padding: 5%;
+            border: solid 1vw #222;
+            margin: .8%;
+            width: 20vw;
+            height: 15vh;
+            bottom: 5%;
+            right: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="unidades-absolutas">Opa!</div>
+    <div class="unidades-relativas">Epa!</div>
+</body>
+
+</html>

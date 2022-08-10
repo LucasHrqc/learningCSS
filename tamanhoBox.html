@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho Box</title>
+    <style>
+        * {
+            /* A opção border-box considera todos os itens para ter a largura de 100% */
+            /* incluindo todos os elementos: padding + border + margin = width 100% */
+            box-sizing: border-box;
+            /* Já a opção content-box considera a soma de tudo width 100% + padding + border + margin */
+        }
+        
+        html{
+            width: 100%;
+        }
+
+        body {
+            font-size: 45px;
+            margin: 0;
+            width: 100%;
+        }
+        div{
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+</html>

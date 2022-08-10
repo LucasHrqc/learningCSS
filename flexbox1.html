@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #01</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+        
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            /* Atribuindo Flexbox */
+            display: flex;
+            /* Alterando o padrão do flexbox (row) pra coluna */
+            flex-direction: column;
+            /* Revertendo a ordem dos elementos, pode ser usado com row */
+            flex-direction: column-reverse; 
+            flex-direction: row-reverse;
+            flex-direction: row;
+            width: 35%;
+            height: 250px;
+            /* Há um overflow, resolver com wrap gerando linhas: */
+            flex-wrap: wrap;
+            /* Ordem normal (ultima foi row), ordem reversa, contido:  */
+            flex-wrap: wrap-reverse;
+            /* Linha, ordem correta, contido */
+            flex-flow: row wrap;
+            /* Coluna, ordem reversa, contido */
+            flex-flow: column-reverse wrap;
+            flex-flow: row wrap;
+            /* Justifica no inicio do flex */
+            justify-content: flex-start;
+            /* Justifica no final do flex */
+            justify-content: flex-end;
+            /* justifica no centro do flex */
+            justify-content: center;
+            /* Espaço em volta dos elementos do flex */
+            justify-content: space-around;
+            /* Espaço somente entre os elementos do flex */
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            /* Cross Axis */
+            height: 400px;
+            /* padrão */
+            align-items: stretch;
+            /* alinhar os elementos pela baseline das fontes */
+            align-items: baseline;
+            /* Alinhar com o inicio do flex */
+            align-items: flex-start;
+            /* Alinhar com o fim do flex */
+            align-items: flex-end;
+            /* Centralizar com o flex */
+            align-items: center;
+            
+            /* Mais de uma linha, TODO o conteúdo do flex */
+            /* Alinhar ao inicio */
+            align-content: flex-start;
+            /* Alinhar ao fim do flex */
+            align-content: flex-end;
+            /* Alinhar ao centro */
+            align-content: center;
+            /* Espaço igual*/
+            align-content: space-around;
+            /* Espaço entre os elementos mas não entre o flex e elementos*/
+            align-content: space-between;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel big">3</div>
+        <div class="tag nolabel">4</div>
+        <div class="tag nolabel">5</div>
+        <div class="tag nolabel">6</div>
+        <div class="tag nolabel">7</div>
+        <div class="tag nolabel">8</div>
+        <div class="tag nolabel">9</div>
+        <div class="tag nolabel">10</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

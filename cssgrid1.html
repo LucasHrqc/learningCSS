@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid #01</title>
+    <style>
+        /* https://caniuse.com/#feat=css-grid */
+        
+        html,
+        body {
+            margin: 20px;
+            height: calc(100% - 40px);
+            background-color: lightgray;
+        }
+        
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            border: solid 5px dodgerblue;
+            background: #fff;
+        }
+
+        body {
+            display: grid;
+            /* Cada coluna ocupa metade do espaço desejado */
+            grid-template-columns: 50% 50%;
+            /* 12 colunas com 8.33% do espaço cada. */
+            grid-template-columns: repeat(12, 8.33%);
+            /* Outras propriedades de repeat, sendo 11 colunas com 50px e uma com 200 */
+            grid-template-columns: repeat(11, 50px) 200px;
+            /* Píxel, porcentagem e resto (3 colunas por que são 3 dados)*/
+            grid-template-columns: 200px 20% 1fr;
+            /* Quebrando em fragmentos baseado no total */
+            grid-template-columns: 3fr 6fr 3fr;
+            /* Definindo a porcentagem de cada linha */
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            /* No último columns foi definido 3 colunas, então são 4 linhas = 12 div
+            então na demonstração abaixo a primeira e segunda linha serão configuradas
+            e as demais utilizarão o espaço que restar. */
+            grid-template-rows: 100px 1fr;
+            /* Definindo a primeira linha e mantendo o resto automatico */
+            grid-template-rows: 100px auto;
+        }
+
+        .d8 {
+            /* Fazendo um elemento começar e terminar em locais específicos, 
+            fazendo os demais elementos serem realocados */
+            grid-column-start: 2;
+            grid-column-end: 4;
+            /* Começa na linha 3 e termina na linha 5, sendo os demais realocados */
+            grid-row-start: 3;
+            grid-row-end: 5;
+            /* Agora o elemento D8 ocupa 4 espaços no GRID */
+        }
+
+        .d10, .d11 {
+            /* SOBREPOSIÇÃO DE ESPAÇOS DO GRID */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+        
+        .d10 {
+            /* PREFERÊNCIA DE DISPLAY PARA CASOS DE SOBREPOSIÇÃO 
+            quanto maior o z-index maior a preferência de sobreposição*/
+            z-index: 10;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="d1">1</div>
+    <div class="d2">2</div>
+    <div class="d3">3</div>
+    <div class="d4">4</div>
+    <div class="d5">5</div>
+    <div class="d6">6</div>
+    <div class="d7">7</div>
+    <div class="d8">8</div>
+    <div class="d9">9</div>
+    <div class="d10">10</div>
+    <div class="d11">11</div>
+    <div class="d12">12</div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #02</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+
+        
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+        }
+
+        .flex-container div {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+            /* Definindo a ordem do item do flexbox */
+            order: 1;
+            order: 0;
+            order: -1;
+            /* Alinhando o alimento padrão é STRETCH*/
+            align-self: center;
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: stretch;
+        }
+
+        .flex-container div {
+            width: 100px;
+            /* Fazendo os itens do flex crescer para preencher o espaço total do flex */
+            flex-grow: 0;
+            flex-grow: 1;
+        }
+
+        .flex-container div:nth-child(1) {
+            /* Selecionei a primeira div e dei um grow maior
+            gerando mais espaço pra esse elemento e menos pros demais */
+            flex-grow: 2;
+        }
+        
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1;
+        }
+        /* Selecionei a div 1 e encolhi de forma a reduzir esta div e 
+        aumentar o restante dos elementos dentro do flex */
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel">3</div>
+        <div class="tag nolabel">4</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

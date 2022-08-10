@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Altura e Largura</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body {
+            font-size: 40px;
+            background-color: coral;
+            height: 100%;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        /* Elementos inline a altura e largura são desconsiderados  */
+        /* A altura em porcentagem só será funcional se os pais do elemento ocupam espaço de 100%*/
+        /* Nesse caso, a div só funcionará altura se body e html tiverem height: 100% */
+        span, div{
+            width: 50%;
+            height: 50%;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>Título</div>
+    <span>Subtítulo</span>
+</body>
+
+</html>
